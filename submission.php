@@ -33,7 +33,7 @@ if(isset($_POST["title"])) {
 }
 ?>
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#" lang="en">
+<html lang="en">
 
 <head>
     <title>Rent a Driveway | Submission</title>

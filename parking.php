@@ -1,6 +1,6 @@
 <?php require 'inc/login_only.inc' ?>
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#" lang="en">
+<html lang="en">
 
 <head>
     <title>Rent a Driveway | View Listing</title>

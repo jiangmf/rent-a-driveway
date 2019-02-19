@@ -32,7 +32,7 @@ if(isset($_POST["firstname"])) {
 }
 ?>
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#" lang="en">
+<html lang="en">
 
 <head>
     <title>Rent a Driveway | Sign Up</title>

@@ -1,6 +1,6 @@
 <?php require 'inc/init_session.inc' ?>
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#" lang="en">
+<html lang="en">
 
 <head>
     <title>Rent a Driveway</title>

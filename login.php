@@ -38,7 +38,7 @@ if(isset($_POST["email"])) {
 }
 ?>
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#" lang="en">
+<html lang="en">
 
 <head>
     <title>Rent a Driveway | Log In</title>
