@@ -1,0 +1,488 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    height: 100%;
+}
+
+body.splash{
+    /* background image for the splash screen, centered and cover the entire screen */
+    background: url('../images/splash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+a {
+    color: #2e86de;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+em {
+    color: #01a3a4;
+    font-style: normal;
+}
+
+img,
+video {
+    /* have images and videos never exten beyond their containers*/
+    width: 100%;
+    max-width: 100%;
+}
+
+h1 {
+    margin: 20px 0 40px 0;
+}
+
+/* Utility classes */
+
+.fl-l {
+    float: left;
+}
+
+.fl-r {
+    float: right;
+}
+
+.clear:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.hidden {
+    display:none;
+}
+
+.error {
+    color: #ee5253;
+}
+
+.rating {
+    color: #feca57;
+}
+
+.price  {
+    color: #01a3a4;
+}
+/* simple flexbox based columns */
+
+.row {
+    margin: 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    padding: 0 10px;
+    position: relative;
+}
+
+.column.full {
+    width: 100%;
+}
+
+.column.half {
+    width: 50%;
+}
+
+.column.quarter {
+    width: 25%;
+}
+
+.column.three-quarters {
+    width: 75%;
+}
+
+.column.third {
+    width: 33.333%;
+}
+
+.column.two-thirds {
+    width: 66.667%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .column.half,
+    .column.three-quarters,
+    .column.two-thirds,
+    .column.third {
+        width: 100%;
+    }
+
+    .column.quarter {
+        width: 50%;
+    }
+
+    .column.sm-full {
+        width: 100%;
+    }
+
+    .sm-hidden{
+        display: none;
+    }
+}
+
+/* Header */
+
+#header {
+    background-color: #01a3a4;
+    color: white;
+    height: 60px;
+    padding: 0 20px;
+    /* Use flexbox to vertically center align,and move logo and nav to left and right respectively */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.splash #header {
+    /* Different color header for splash screen */
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#header>nav>a {
+    color: white;
+    margin: 0 10px;
+}
+
+/* Footer */
+
+#footer {
+    background-color: #004040;
+    color: white;
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash #footer {
+    /* Different color footer for splash screen */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Centered content container with max width */
+
+#container {
+    margin: auto;
+    max-width: 1000px;
+    background-color: white;
+    /* The container always takes up at least the height of the window minus the header + footer */
+    min-height: calc(100% - 120px);
+    padding: 20px;
+}
+
+/* splash image container for home page */
+
+.splash #container {
+    background-color: transparent;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    flex-wrap: wrap
+}
+
+.splash .splash-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash .splash-buttons .btn {
+    margin: 20px;
+} 
+
+/* Form Styles*/
+
+form>fieldset {
+    padding: 20px;
+    border: 1px solid #01a3a4;
+    margin: 0 0 20px 0;
+}
+
+form .row>.field {
+    margin-bottom: 20px;
+}
+
+form .row>.field>label {
+    display: block;
+    font-weight: bold;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+form .row>.field>input[type="text"],
+form .row>.field>input[type="number"],
+form .row>.field>input[type="email"],
+form .row>.field>input[type="password"],
+form .row>.field>input[type="date"],
+form .row>.field>select {
+    display: block;
+    width: 100%;
+    height: 30px;
+    border: 0;
+    border-bottom: 1px solid #999;
+}
+
+form .row>.field>textarea {
+    width: 100%;
+}
+
+/* Field type specific icons/decorations */
+
+label[data-type='distance']:after {
+    content: 'km';
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    bottom: 7px;
+}
+
+label[data-type='currency']:after {
+    content: '$';
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    bottom: 7px;
+}
+
+label[data-type='currency']+input {
+    padding-left: 15px;
+}
+
+label[data-type='date']:after {
+    font-family: "Font Awesome 5 Free";
+    content: '\f133';
+    font-weight: normal;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    bottom: 7px;
+}
+
+label[data-type='date']+input {
+    padding-left: 20px;
+}
+
+/* Button Styles */
+
+.btn {
+    padding: 15px 20px;
+    border: 0;
+    border-radius: 5px;
+    min-width: 100px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn.btn-primary {
+    background-color: #01a3a4;
+    color: white;
+}
+
+.btn.btn-secondary {
+    background-color: white;
+    color: #01a3a4;
+    border: 1px solid #01a3a4;
+}
+
+/* Tiles / Content Blocks */
+
+.tile {
+    margin-bottom: 20px;
+}
+
+.tile h3 {
+    margin: 20px 0 10px 0;
+}
+
+.tile h3 .price {
+    display: inline-block;
+}
+
+/* Results list tiles */
+
+#results-list .tile {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#results-list .tile>a {
+    flex: 0 0 200px;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    #results-list .tile>a {
+        flex: 0 0 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+#results-list .tile .tile-content {
+    flex: 1;
+}
+
+#results-list .tile h3 {
+    margin: 0 0 5px 0;
+}
+
+#results-list .tile .location {
+    margin: 0 0 5px 0;
+    color: #666;
+}
+
+#results-list .tile .rating {
+    margin: 0 0 5px 0;
+}
+
+#results-list .tile .description {
+    margin: 0 0 5px 0;
+}
+
+
+/* listing details */
+
+#listing-details .rating {
+    margin: 0 0 20px 0;
+}
+
+#listing-details .price {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+}
+
+#listing-details ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0 0 20px 0;
+}
+
+#listing-details ul li {
+    margin-bottom: 5px;
+}
+
+#listing-details ul li .far,
+#listing-details ul li .fas {
+    width: 20px;
+    color: #666;
+    text-align: center;
+}
+
+#listing-details p {
+    margin: 0;
+}
+
+/* comments */
+
+#comments-list .tile {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+#comments-list .tile h4 {
+    margin: 0 0 5px 0;
+}
+
+#comments-list .rating {
+    margin-right: 10px;
+}
+
+#comments-list p {
+    margin: 0 0 5px 0;
+}
+
+#comments-list .date {
+    font-size: 14px;
+    color: #666;
+}
+
+#review-form #rating{
+    position:absolute;
+    opacity: 0;
+    left: 100px;
+    width: 10px;
+}
+
+/* Map */
+#results-map {
+    height: 500px;
+    max-height: 80vh;
+    margin-bottom: 20px;
+}
+
+#parking-map {
+    height: 320px;
+    max-height: 80vh;
+}
+
+.mapboxgl-popup {
+    width: 250px;
+}
+
+.mapboxgl-popup .tile h3,
+.mapboxgl-popup .tile p {
+    margin: 5px 0;
+}
+
+.mapboxgl-popup-close-button {
+    font-size: 20px;
+    background-color: white;
+}
+
+.mapboxgl-popup-close-button:hover {
+    background-color: #eeeeee;
+}
+
+.marker {
+  border: none;
+  cursor: pointer;
+  width: 25px;
+  height: 33px;
+  background-size: 100%;
+  background-image: url('../images/marker.png');
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* One offs */
+.locate-me img {
+    width: auto;
+    height: 15px;
+}
+
+#notification {
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    background-color: rgba(16, 172, 132, 0.8);
+    padding: 35px;
+    color: white;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
