@@ -43,7 +43,7 @@ if(isset($_POST["email"])) {
 <head>
     <title>Rent a Driveway | Log In</title>
     <?php include 'inc/head.inc' ?>
-    <meta property="og:url" content="https://parking.ele.moe/login.php" />
+    <meta property="og:url" content="https://sandbox.ele.moe/parking/login.php" />
 </head>
 
 <body>

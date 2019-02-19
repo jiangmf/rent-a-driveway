@@ -5,7 +5,7 @@
 <head>
     <title>Rent a Driveway | Search</title>
     <?php include 'inc/head.inc' ?>
-    <meta property="og:url" content="https://parking.ele.moe/search.php" />
+    <meta property="og:url" content="https://sandbox.ele.moe/parking/search.php" />
 </head>
 
 <body>

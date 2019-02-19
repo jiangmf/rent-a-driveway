@@ -38,7 +38,7 @@ if(isset($_POST["title"])) {
 <head>
     <title>Rent a Driveway | Submission</title>
     <?php include 'inc/head.inc' ?>
-    <meta property="og:url" content="https://parking.ele.moe/submission.php" />
+    <meta property="og:url" content="https://sandbox.ele.moe/parking/submission.php" />
 </head>
 
 <body>

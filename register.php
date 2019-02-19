@@ -37,7 +37,7 @@ if(isset($_POST["firstname"])) {
 <head>
     <title>Rent a Driveway | Sign Up</title>
     <?php include 'inc/head.inc' ?>
-    <meta property="og:url" content="https://parking.ele.moe/register.php" />
+    <meta property="og:url" content="https://sandbox.ele.moe/parking/register.php" />
     <?php
     // If there were errors
     if(isset($_POST['firstname']) && count($errors) > 0){ ?>
